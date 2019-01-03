@@ -6,4 +6,3 @@ edition = "2018"
 
 [dependencies]
 torch = { path = "../torch" }
-tensor-lit = { path = "../tensor-lit" }
