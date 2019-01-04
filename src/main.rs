@@ -2,6 +2,29 @@
 extern crate torch;
 
 fn main() {
+    basic_tensor_operations();
+}
+
+#[allow(dead_code)]
+fn basic_tensor_operations() {
+    let a = tensor!([
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5]
+    ]);
+    let b = tensor!([
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5],
+        [1.0, 2.01, 3.02, 4.5]
+    ]);
+    let c = a.add(b).unwrap();
+    println!("{:?}", c);
+}
+
+#[allow(dead_code)]
+fn print_really_huge_tensor() {
     let w = tensor!([
         [
             [
