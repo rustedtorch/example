@@ -19,8 +19,10 @@ fn basic_tensor_operations() {
         [1.0, 2.01, 3.02, 4.5],
         [1.0, 2.01, 3.02, 4.5]
     ]);
-    let c = a.add(b).unwrap();
-    println!("{:?}", c);
+    let sum = a.add(&b).unwrap();
+    println!("sum = {:?}", sum);
+    let mul = a.mul(&b).unwrap();
+    println!("mul = {:?}", mul);
 }
 
 #[allow(dead_code)]
